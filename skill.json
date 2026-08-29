@@ -1,0 +1,41 @@
+{
+  "name": "genpark-unified-llm-alignment-dpo-lora-training-suite-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Unified LLM alignment suite orchestrating Direct Preference Optimization (DPO), LoRA, and multi-GPU distributed runs.",
+  "author": "genpark",
+  "category": "llm-alignment",
+  "tags": [
+    "llama-factory",
+    "dpo-training",
+    "lora-finetuning",
+    "preference-optimization",
+    "rlhf"
+  ],
+  "inputs": {
+    "dataset_name": {
+      "type": "string"
+    },
+    "algorithm_type": {
+      "type": "string"
+    },
+    "target_epochs": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "training_run_id": {
+      "type": "string"
+    },
+    "algorithm": {
+      "type": "string"
+    },
+    "eval_reward_margin_improvement_pct": {
+      "type": "number"
+    },
+    "exported_adapter_weights_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
